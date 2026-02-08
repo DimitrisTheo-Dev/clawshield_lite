@@ -18,7 +18,20 @@ function isLikelyBlobId(value: string): boolean {
     return false;
   }
 
-  return /^z-[A-Za-z0-9_-]+$/.test(trimmed) || /^walrus:\/\/[A-Za-z0-9._:-]+$/i.test(trimmed);
+  if (/^walrus:\/\/[A-Za-z0-9._:-]+$/i.test(trimmed)) {
+    return true;
+  }
+
+  if (/^z-[A-Za-z0-9_-]+$/.test(trimmed)) {
+    return true;
+  }
+
+  // Walrus identifiers may also appear as URL-safe base64 without the "z-" prefix.
+  if (/^[A-Za-z0-9_-]{20,}$/.test(trimmed) && !/^0x[0-9a-fA-F]{20,}$/.test(trimmed)) {
+    return true;
+  }
+
+  return false;
 }
 
 function parseJsonValue(raw: string): unknown | null {
