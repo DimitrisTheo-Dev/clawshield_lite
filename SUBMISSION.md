@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="ClawShield Lite logo" width="720" />
+</p>
+
 # ClawShield Lite - DeepSurge Submission Text
 
 ## One-paragraph pitch

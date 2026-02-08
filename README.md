@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="ClawShield Lite logo" width="720" />
+</p>
+
 # ClawShield Lite
 
 ClawShield Lite is a local-first guardrail and auditor for high-privilege AI agents. It scans untrusted inputs (web text, emails, markdown skills, pasted snippets, files), detects prompt injection and risky intent, assigns a deterministic verdict (`ALLOW`, `SANITIZE`, `BLOCK`), and emits a tamper-evident receipt.

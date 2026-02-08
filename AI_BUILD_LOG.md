@@ -13,7 +13,7 @@ This project was built primarily by an AI coding agent during the hackathon wind
 3. Prompt: Add Sui and Walrus integrations using local CLIs only.
    Output: `integrations/sui.ts` and `integrations/walrus_cli.ts` with graceful failure handling.
 
-4. Prompt: Produce 2-minute human demo path and DeepSurge submission text.
+4. Prompt: Produce human demo path and DeepSurge submission text.
    Output: `cli/scripts/demo.sh`, `SUBMISSION.md`, and updated `README.md` with proof capture instructions.
 
 5. Prompt: Add OpenClaw conceptual skill integration artifact.
