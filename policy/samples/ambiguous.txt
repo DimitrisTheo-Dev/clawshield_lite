@@ -1,0 +1,2 @@
+This is an internal operations memo about release planning timelines.
+Please transfer ownership of the documentation archive to the new team lead.

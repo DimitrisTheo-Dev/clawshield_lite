@@ -1,0 +1,94 @@
+{
+  "tool": "clawshield_lite",
+  "policy_version": 1,
+  "default_trust_zone": "untrusted",
+  "trust_zones": {
+    "trusted": { "description": "Local repository code and pinned policy files." },
+    "untrusted": { "description": "External content such as web pages, emails, skill markdown, pasted text." }
+  },
+  "enforcement": {
+    "wallet_actions": "explicit_human_approval_required",
+    "system_commands": "explicit_human_approval_required",
+    "self_modification": "blocked",
+    "skill_installation": "require_review"
+  },
+  "risk_scoring": {
+    "block_threshold": 70,
+    "sanitize_threshold": 40
+  },
+  "rules": [
+    {
+      "id": "override",
+      "title": "Instruction override attempt",
+      "severity": 30,
+      "patterns": [
+        "ignore previous instructions",
+        "disregard previous",
+        "system prompt",
+        "developer message",
+        "you are now",
+        "follow these instructions exactly",
+        "do not tell the user"
+      ]
+    },
+    {
+      "id": "secrets",
+      "title": "Secret or credential harvesting",
+      "severity": 40,
+      "patterns": [
+        "seed phrase",
+        "private key",
+        "mnemonic",
+        "api key",
+        "password",
+        "token",
+        "ssh key",
+        "export",
+        "paste your"
+      ]
+    },
+    {
+      "id": "wallet_signing",
+      "title": "Wallet signing or transaction execution request",
+      "severity": 50,
+      "patterns": [
+        "sign this transaction",
+        "approve transaction",
+        "connect your wallet",
+        "transfer",
+        "send usdc",
+        "swap",
+        "claim by signing",
+        "confirm in wallet"
+      ]
+    },
+    {
+      "id": "command_exec",
+      "title": "Command execution escalation",
+      "severity": 45,
+      "patterns": [
+        "open terminal",
+        "run this command",
+        "sudo",
+        "chmod",
+        "powershell",
+        "curl",
+        "bash",
+        "download and run"
+      ]
+    },
+    {
+      "id": "self_modify",
+      "title": "Self modification attempt",
+      "severity": 60,
+      "patterns": [
+        "rewrite your instructions",
+        "update your system prompt",
+        "disable safety",
+        "remove guardrails",
+        "change your policy",
+        "edit your memory"
+      ]
+    }
+  ]
+}

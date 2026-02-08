@@ -1,0 +1,17 @@
+# Node artifacts
+cli/node_modules/
+cli/dist/
+
+# Move build artifacts
+move/build/
+
+# Sui ephemeral publication files
+Pub.*.toml
+cli/Pub.*.toml
+
+# Local env exports
+cli/.clawshield.env
+
+# Editor artifacts
+.idea/
+.DS_Store

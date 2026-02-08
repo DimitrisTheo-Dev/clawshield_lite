@@ -1,0 +1,20 @@
+{
+  "name": "clawshield_lite_cli",
+  "version": "0.1.0",
+  "description": "ClawShield Lite CLI for prompt injection risk scanning with Sui receipts",
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "clawshield": "dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "demo": "node dist/main.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "typescript": "^5.7.3"
+  }
+}

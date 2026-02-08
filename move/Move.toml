@@ -1,0 +1,14 @@
+[package]
+name = "clawshield_receipts"
+version = "0.0.1"
+edition = "2024.beta"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+[addresses]
+clawshield_receipts = "0x0"
+
+[environments]
+testnet = "4c78adac"
+devnet = "de6146d1"
