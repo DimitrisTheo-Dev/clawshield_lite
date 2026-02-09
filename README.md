@@ -6,7 +6,7 @@
 
 ClawShield Lite is a local-first guardrail and auditor for high-privilege AI agents. It scans untrusted inputs (web text, emails, markdown skills, pasted snippets, files), detects prompt injection and risky intent, assigns a deterministic verdict (`ALLOW`, `SANITIZE`, `BLOCK`), and emits a tamper-evident receipt.
 
-For OpenClaw x Sui Track 1, it uses Sui Move by publishing a package and emitting an on-chain `ReceiptEmitted` event for each posted scan. Optional Walrus logging adds extended auditability.
+This is my submission for Sui x OpenClaw AI Agent Hackathon, it uses Sui Move by publishing a package and emitting an on-chain `ReceiptEmitted` event for each posted scan. Optional Walrus logging adds extended auditability.
 
 ## Why this matters
 
